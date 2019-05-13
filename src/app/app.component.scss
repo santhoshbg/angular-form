@@ -1,0 +1,30 @@
+.example5 .navbar-brand {
+  display: flex;
+  align-items: center;
+}
+.example5 .navbar-brand>img {
+  padding: 7px 14px;
+}
+
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.navbar-default {
+  background-color: #2D2E2E;
+  border: none;
+  border-bottom: 5px solid #ff0000 !important;
+}
+.navbar-default .navbar-brand {
+  color: #fff;
+}
+.navbar-default:hover .navbar-brand:hover {
+  color: #00A8FF;
+}
+.navbar-default .navbar-nav>li>a {
+  color: #fff;
+}
+.navbar-default:hover .navbar-nav>li>a:hover {
+  color: #00A8FF;
+}

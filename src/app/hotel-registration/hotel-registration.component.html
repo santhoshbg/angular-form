@@ -1,0 +1,68 @@
+<p> {{ hotelRegistrationForm }} </p>
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h3>{{ hotelRegistrationForm }}</h3>
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <label> {{ name }} </label>
+                        <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                            <div *ngIf="f.firstName.errors.required">{{ firstNameRequired }}</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>{{ email }}</label>
+                        <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                            <div *ngIf="f.email.errors.required">{{ emailRequired }}</div>
+                            <div *ngIf="f.email.errors.email">{{ validEmailAddress }}</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Address : </label>
+                        <input type="checkbox" name="myChk" id="myChk" (change)="triggerSomeEvent()" />
+                        <input type="text" formControlName="address" name="myTxt" id="myTxt" value="" [hidden]="isDisabled" />
+                        <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
+                            <div *ngIf="f.address.errors.required">address Required </div>
+                        </div>
+                    </div>
+
+                    <div class="fromDate-and-twoDate">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <label>From Date : </label>
+                                <input class="form-control" formControlName="fromDate" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"><i class="fa fa-calendar"></i></button>
+                                </div>
+                                <div *ngIf="submitted && f.fromDate.errors" class="invalid-feedback">
+                                    <div *ngIf="f.fromDate.errors.required">fromDate Required </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <label>To Date : </label>
+                                <input class="form-control" formControlName="toDate" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"><i class="fa fa-calendar"></i></button>
+                                </div>
+                                <div *ngIf="submitted && f.toDate.errors" class="invalid-feedback">
+                                    <div *ngIf="f.toDate.errors.required">toDate Required </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <button class="btn btn-primary">{{ register }} </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

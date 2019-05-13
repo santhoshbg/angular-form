@@ -1,0 +1,77 @@
+
+angular 6 imp urls
+
+Angular 6 Tutorial - Learn Angular 6 in this Crash Course
+https://coursetro.com/posts/code/154/Angular-6-Tutorial---Learn-Angular-6-in-this-Crash-Course
+
+angular-6-user-registration-and-login-example-tutorial
+http://jasonwatmore.com/post/2018/05/16/angular-6-user-registration-and-login-example-tutorial
+
+angular-2-user-registration-and-login-example-tutorial
+http://jasonwatmore.com/post/2016/09/29/angular-2-user-registration-and-login-example-tutorial
+
+http://jasonwatmore.com/post/2018/05/16/angular-6-user-registration-and-login-example-tutorial
+
+Demo Apis :
+https://jsonplaceholder.typicode.com/posts
+https://jsonplaceholder.typicode.com/users/
+
+Material icons
+https://material.io/tools/icons/?style=baseline
+https://material.io/tools/icons/?icon=book&style=round
+
+
+Angular 5: Making API calls with the HttpClient service
+https://www.metaltoad.com/blog/angular-5-making-api-calls-httpclient-service
+
+Observable ?
+service makes the HTTP request and returns the Observable object. To actually get the data from the service, we need to update our component to subscribe to the Observable:
+
+
+Angular and RxJS: Adding a REST API Back End
+https://www.sitepoint.com/angular-rxjs-create-api-service-rest-backend/
+
+Angular 5|6 By Example: Making HTTP GET Requests using HttpClient
+https://www.techiediaries.com/angular-by-example-httpclient-get/
+
+ANGULAR2: HTTP POST WITH COMPLEX OBJECT USING OBSERVABLE IN ANGULAR 2 APPLICATION
+https://hassantariqblog.wordpress.com/2016/12/03/angular2-http-post-with-complex-object-using-observable-in-angular-2-application/
+
+An Introduction to Component Routing with Angular Router
+https://www.sitepoint.com/component-routing-angular-router/
+
+Angular 6 Tutorial: Getting Started Build Angular 6 Web Application
+https://www.djamware.com/post/5afa31a780aca726dee1fd6c/angular-6-tutorial-getting-started-build-angular-6-web-application
+
+
+Angular cli:
+https://cli.angular.io/
+
+Observables, Observers & Subscriptions
+An observable is a function that produces a stream of values to an observer over time. 
+When you subscribe to an observable, you are an observer.
+An observable can have multiple observers.
+This is the basic gist of the relationship between observables, observers and subscriptions. Of course, there are more details, which we'll look at closer.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
