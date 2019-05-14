@@ -1,13 +1,12 @@
-<p> {{ hotelRegistrationForm }} </p>
+<!-- <p> {{ hotelRegistrationForm }} </p> -->
 <div class="jumbotron">
     <div class="container">
         <div class="row">
             <div class="col-md-6 offset-md-3">
-                <h3>{{ hotelRegistrationForm }}</h3>
                 <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
                     <div class="form-group">
                         <label> {{ name }} </label>
-                        <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                        <input type="text" [(ngModel)]="firstName" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
                         <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
                             <div *ngIf="f.firstName.errors.required">{{ firstNameRequired }}</div>
                         </div>
@@ -60,6 +59,7 @@
 
                     <div class="form-group">
                         <button class="btn btn-primary">{{ register }} </button>
+                        <!-- <button class="btn btn-primary" [disabled]="!registerForm.valid" routerLink="/registrationdetails" routerLinkActive="active-link">{{ register }}</button> -->
                     </div>
                 </form>
             </div>

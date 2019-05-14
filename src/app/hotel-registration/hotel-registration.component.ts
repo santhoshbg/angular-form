@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-hotel-registration',
@@ -20,12 +22,13 @@ export class HotelRegistrationComponent implements OnInit {
   registerForm: FormGroup;
   submitted = false;
   isDisabled = true;
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private router: Router) {   }
 
   ngOnInit() {
     this.registerForm = this.formBuilder.group({
       firstName: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
+      // email: ['', [Validators.required, Validators.email]],
+      email: ['', [Validators.required, Validators.email, Validators.pattern('[a-zA-z0-9_\.]+@[a-zA-Z]+\.[a-zA-Z]+')]],
       address: ['', Validators.required],
       fromDate: ['', Validators.required],
       toDate: ['', Validators.required],
@@ -41,10 +44,6 @@ export class HotelRegistrationComponent implements OnInit {
     return;
 }
 
-// cahngeStatus(index) {
-//   peoples[index].status = !peoples[index].status;
-// }
-
   onSubmit() {
     this.submitted = true;
 
@@ -54,6 +53,7 @@ export class HotelRegistrationComponent implements OnInit {
 
     alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value));
     console.log('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value));
+    this.router.navigate(['registrationdetails', this.registerForm.value]);
+    this.registerForm.reset();
   }
-
 }

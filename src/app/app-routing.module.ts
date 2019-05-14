@@ -9,7 +9,7 @@ const routes: Routes = [
     path: '',
     component: HotelRegistrationComponent
   },
-  { path: 'registration', component:  HotelRegistrationComponent},
+  // { path: 'registration', component:  HotelRegistrationComponent},
   { path: 'registrationdetails', component: HotelRegistrationDetailsComponent },
   { path: '**', redirectTo: ''  }
 ];
